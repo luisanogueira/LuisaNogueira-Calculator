@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced</title>
+	<link rel="stylesheet" type="text/css" href="advanced.css">
+</head>
+<body>
+	<div id="display">
+		
+	</div>
+	<div class="buttons">
+		<button id="1">1</button>
+		<button id="2">2</button>
+		<button id="3">3</button>
+		<button id="add">+</button>
+		<button id="4">4</button>
+		<button id="5">5</button>
+		<button id="6">6</button>
+		<button id="subtr">-</button>
+		<button id="7">7</button>
+		<button id="8">8</button>
+		<button id="9">9</button>
+		<button id="mult">x</button>
+		<button id="clear">CE</button>
+		<button id="0">0</button>
+		<button id="dec">.</button>
+		<button id="divide">/</button>
+		<button id="ans">=</button>
+	</div>
+	
+
+	<script type="text/javascript">
+		var disp = document.getElementById("display");
+
+		function all(n) {
+			disp.innerHTML += n;
+		}
+
+		function ans() {
+			c = eval(disp.innerHTML);
+			disp.innerHTML = c;
+		}
+
+		function clc() {
+			disp.innerHTML = " ";
+		}
+
+		document.getElementById("1").addEventListener("click", function(){ all(1); })
+		document.getElementById("2").addEventListener("click", function(){ all(2); })
+		document.getElementById("3").addEventListener("click", function(){ all(3); })
+		document.getElementById("4").addEventListener("click", function(){ all(4); })
+		document.getElementById("5").addEventListener("click", function(){ all(5); })
+		document.getElementById("6").addEventListener("click", function(){ all(6); })
+		document.getElementById("7").addEventListener("click", function(){ all(7); })
+		document.getElementById("8").addEventListener("click", function(){ all(8); })
+		document.getElementById("9").addEventListener("click", function(){ all(9); })
+		document.getElementById("0").addEventListener("click", function(){ all(0); })
+		document.getElementById("dec").addEventListener("click", function(){ all("."); })
+		document.getElementById("add").addEventListener("click", function(){ all("+"); })
+		document.getElementById("subtr").addEventListener("click", function(){ all("-"); })
+		document.getElementById("mult").addEventListener("click", function(){ all("*"); })
+		document.getElementById("divide").addEventListener("click", function(){ all("/"); })
+		document.getElementById("ans").addEventListener("click", function(){ ans(); })
+		document.getElementById("clear").addEventListener("click", function(){ clc(); })
+
+	</script>
+
+</body>
+</html>
